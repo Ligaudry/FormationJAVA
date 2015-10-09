@@ -50,7 +50,10 @@ public class Book extends Media {
 		return nbAut;
 	}
 	
-	public void addAuthor(Author a){
+	public void addAuthor(Author a) throws MediaException {
+		if(nbAut> 10){
+			throw new MediaException ("too many authors");
+		}
 		auteurs[nbAut++]=a;
 	}
 	

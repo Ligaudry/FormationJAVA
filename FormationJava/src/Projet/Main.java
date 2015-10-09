@@ -67,8 +67,18 @@ public class Main {
 			
 		// "lier" le livre1, l'edit1, et le groupe1
 		livre1.setEditeur(edit1);
-		livre1.addAuthor(auteur1);
-		livre1.addAuthor(auteur2);
+		try {
+			livre1.addAuthor(auteur1);
+		} catch (MediaException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			livre1.addAuthor(auteur2);
+		} catch (MediaException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		System.out.println(livre1.getEditeur().getCorporateName());
 		System.out.println(livre1.getTitle());
 		/*display(livre1.getAuteurs());*/
