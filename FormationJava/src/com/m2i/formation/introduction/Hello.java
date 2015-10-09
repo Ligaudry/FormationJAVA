@@ -1,3 +1,4 @@
+package com.m2i.formation.introduction;
 
 public class Hello {
 

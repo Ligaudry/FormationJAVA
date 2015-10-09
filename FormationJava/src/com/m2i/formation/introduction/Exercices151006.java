@@ -1,4 +1,15 @@
+package com.m2i.formation.introduction;
 import java.util.Random;
+
+import com.m2i.formation.poo.Book;
+
+import Projet.Dvd;
+import Projet.Publisher;
+import Projet.Artist;
+import Projet.Author;
+import Projet.BookCategory;
+import Projet.Cd;
+import Projet.Director;
 
 public class Exercices151006 {
 	
@@ -183,6 +194,132 @@ public static void triBulle(int[] tab){//method triBulle qui classe un tableau m
 		System.out.println();
 		display(insert2(tab,3,66));
 		
+		Book b = new Book();
+		b.setTitle("Java");
+		System.out.println(b.getTitle());
+		
+		//Créer deux Book différents
+		
+		Book b1 = new Book();
+		b1.setTitle("cristaline");
+		System.out.println(b1.getTitle());
+		b1.setId(456);
+		b1.setIsbn("0021");
+		b1.setLang("fr-FR");
+		b1.setNbPage(210);
+		b1.setPrice(17.5);
+		
+		Book b2 = new Book();
+		b2.setTitle("Madame Bovary");
+		System.out.println(b2.getTitle());
+		b2.setId(751);
+		System.out.println(b2.getId());
+		b2.setIsbn("00325");
+		b2.setLang("fr-FR");
+		System.out.println(b2.getLang());
+		b2.setNbPage(110);
+		b2.setPrice (45.0);
+		System.out.println(b2.getPrice()+"€");
+		
+		//céer un objet edit qui appartient à la classe Publisher 
+		/*Publisher edit1 = new Publisher();
+		edit1.setCity("Lyon");
+		edit1.setCorporateName("Les Editions de Minuit");
+		
+		
+		b1.setEditeur(edit1);
+		System.out.println(b1.getTitle());
+		System.out.println(b1.getEditeur().getCity());
+		System.out.println(b1.getEditeur().getCorporateName());*/
+		
+		Publisher edit2 = new Publisher();
+		edit2.setCity("Orléans");
+		edit2.setCorporateName("Gallimard");
+		System.out.println(b2.getTitle());
+		b2.setEditeur(edit2);
+		System.out.println(b2.getEditeur().getCity());
+		System.out.println(b2.getEditeur().getCorporateName());
+		
+		// créer une instance qui appartient à la classe Book,
+		//créer une instance qui appartient à la classe Publisher
+		//créer une instance qui appartient à la classe Author
+		Book livre1 = new Book();
+		Publisher edit1 = new Publisher();
+		Author auteur1 = new Author();
+		auteur1.setFirstName("William");
+		auteur1.setLastName("Faulkner");
+		Author auteur2 = new Author();
+		auteur2.setFirstName("John");
+		auteur2.setLastName("Steinbeck");
+		// remplir le livre1, l'edit1 et le groupe1
+		
+		livre1.setTitle("Les feux de l'été");
+		edit1.setCorporateName("Folio");
+	
+			
+		// "lier" le livre1, l'edit1, et le groupe1
+		livre1.setEditeur(edit1);
+		livre1.addAuthor(auteur1);
+		livre1.addAuthor(auteur2);
+		System.out.println(livre1.getEditeur().getCorporateName());
+		System.out.println(livre1.getTitle());
+		System.out.println(livre1.getAuteurs());
+		livre1.setCategory(BookCategory.SF);
+		
+		Dvd dvd1 = new Dvd();
+		Director realisateur1 = new Director();
+		realisateur1.setFirstName("Ken");
+		realisateur1.setLastName("Loach");
+		dvd1.setDirector(realisateur1);
+		
+		Cd cd1 = new Cd();
+		Artist art1 = new Artist();
+		Artist art2 = new Artist();
+		Artist art3 = new Artist();
+		art1.setFirstName("Kevin");
+		art1.setLastName("Parker");
+		art2.setFirstName("Dominic");
+		art2.setLastName("Simper");
+		art3.setFirstName("Jay");
+		art3.setLastName("Watson");
+		cd1.setTitle("Innerspeaker");
+		cd1.addArtist(art1);
+		cd1.addArtist(art2);
+		cd1.addArtist(art3);
+		cd1.setBand("Tame Impala");
+		
+		
+		
+		
+		
+			
+		
+		
+		
+		/*System.out.println(Counter.increment());
+		System.out.println(count1.increment());
+		System.out.println(count1.increment());
+		Counter count2= new Counter();
+		System.out.println(count2.increment());
+		System.out.println(count2.increment());
+		System.out.println(count2.increment());*/
+		
+		
+		
+		
+		
+		
+		
+		/*Book b3 = b1;
+		
+		if (b1==b3){
+			System.out.println(b1+"est identique à "+b3);
+		}
+		else {System.out.println(b1+" différent de "+b3);*/
+		
+		
+		
+		
 		
 		
 				
@@ -198,6 +335,8 @@ public static void triBulle(int[] tab){//method triBulle qui classe un tableau m
 			tab [i] =
 		}*/
 	}
+
+
 	
 
 

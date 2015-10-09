@@ -1,4 +1,9 @@
+package com.m2i.formation.poo;
 import java.util.Date;
+
+import Projet.Author;
+import Projet.BookCategory;
+import Projet.Publisher;
 
 public class Book {
 		private Publisher editeur;//associer une nouvelle variable nommée éditeur (de classe Publisher) à la classe Book
@@ -11,6 +16,8 @@ public class Book {
 		private String lang;//code iso pour toutes les langues et les régions de la planète
 		private Author[] auteurs = new Author[10];
 		private int nbAut=0;//ici pas nécessaire
+		private BookCategory category;
+		
 		
 		public String getTitle() {
 			return title;
@@ -74,6 +81,16 @@ public class Book {
 		public void addAuthor(Author a){
 			auteurs[nbAut++]=a;
 		}
+		public BookCategory getCategory() {
+			return category;
+		}
+		public void setCategory(BookCategory category) {
+			this.category = category;
+		}
+		
+		
+		
+		
 			
 	
 		 
