@@ -1,15 +1,8 @@
 package com.m2i.formation.introduction;
 import java.util.Random;
 
-import com.m2i.formation.poo.Book;
+import com.m2i.formation.media.entities.*;
 
-import Projet.Dvd;
-import Projet.Publisher;
-import Projet.Artist;
-import Projet.Author;
-import Projet.BookCategory;
-import Projet.Cd;
-import Projet.Director;
 
 public class Exercices151006 {
 	
@@ -206,7 +199,6 @@ public static void triBulle(int[] tab){//method triBulle qui classe un tableau m
 		b1.setId(456);
 		b1.setIsbn("0021");
 		b1.setLang("fr-FR");
-		b1.setNbPage(210);
 		b1.setPrice(17.5);
 		
 		Book b2 = new Book();
@@ -217,7 +209,6 @@ public static void triBulle(int[] tab){//method triBulle qui classe un tableau m
 		b2.setIsbn("00325");
 		b2.setLang("fr-FR");
 		System.out.println(b2.getLang());
-		b2.setNbPage(110);
 		b2.setPrice (45.0);
 		System.out.println(b2.getPrice()+"€");
 		
@@ -259,11 +250,9 @@ public static void triBulle(int[] tab){//method triBulle qui classe un tableau m
 			
 		// "lier" le livre1, l'edit1, et le groupe1
 		livre1.setEditeur(edit1);
-		livre1.addAuthor(auteur1);
-		livre1.addAuthor(auteur2);
 		System.out.println(livre1.getEditeur().getCorporateName());
 		System.out.println(livre1.getTitle());
-		System.out.println(livre1.getAuteurs());
+//		System.out.println(livre1.getAuteurs());
 		livre1.setCategory(BookCategory.SF);
 		
 		Dvd dvd1 = new Dvd();

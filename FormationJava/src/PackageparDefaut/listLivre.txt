@@ -1,0 +1,10 @@
+Titre;Editeur;Prix;
+Contes nomades;Rue du monde;14;021
+La couleur de la nuit Gauguin;L'élan vert;58;031
+La fée s'est trompée;L'école des loisirs;12;041
+Le loukoum à la pistache;Syros;45;051
+Monsieur Chopin ou le voyage de la note bleue;Didier;32;061
+Fables choisies de Léonard de Vinci;Le sablier;45;071
+La langue au chat;Cadex;25;081
+Chambre 203;Hachette jeunesse;16;091
+Des zigotos chez Crapoto;L'élan vert;7;101
