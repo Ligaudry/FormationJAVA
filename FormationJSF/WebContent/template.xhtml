@@ -5,15 +5,34 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html">
-<head>
-<title>Not present in rendered output</title>
-</head>
-<body>
-<composite:interface>
-Hello World
-</composite:interface>
-<composite:implementation>
 
-</composite:implementation>
-</body>
+<h:head> 
+      <title>
+          ${title}
+      </title>
+      <h:outputStylesheet name="css/style.css"></h:outputStylesheet>
+<!--       <link rel="stylesheet" type="text/css" href="style.css"></link> -->
+  </h:head> 
+<h:body>
+         <div id="bandeau"><b> Book Manager </b></div> 
+         <div id="rectangle">
+         	<ul>
+	         	<li>
+	         	<h1>Echantillon de book</h1>
+	         	<ui:insert name="data1"/>
+	         	</li>
+	         	<hr></hr>
+	           	<li>
+	         	<ui:insert name="data2"/>
+	         	</li>
+	         	<hr></hr>
+	         	<li>
+	         	<ui:insert name="data3"/>
+	         	</li>
+	         	<hr></hr>
+         
+        	</ul> </div> 
+         
+  </h:body> 
+
 </html>

@@ -15,14 +15,22 @@ public class BookController {
 		book.setPrice(10.5);
 		
 		//return "showBook"; //pour éviter de se planter dans l'orthographe on fait une énumération
-		return BookControllerEnum.showBook.toString();
+		return BookControllerEnum.page_2.toString();
 		
 	}
 	
 	public String insertBook(){
 		//on devrait faire un insert dans la BD
-		return BookControllerEnum.showBook.toString();
+		return BookControllerEnum.page_2.toString();
 		
+	}
+	
+	public String getBookById(){
+		//appel à la base de données
+		book.setTitle("Sample");
+		book.setPrice(10);
+		
+		return BookControllerEnum.page_2.toString();
 	}
 
 	public BookBean getBook() {

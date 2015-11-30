@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:composite="http://java.sun.com/jsf/composite"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<title>Not present in rendered output</title>
+</head>
+<h:body> 
+       <ui:composition template="/template.xhtml"> 
+            <ui:param name="title"
+              value="Welcome page "/>
+            
+            <ui:define name="links"> 
+            </ui:define> 
+            <ui:define name="data1">
+            
+                <h:form>
+					<h:commandButton  value="Get Sample Book" action="#{bookController.getSampleBook}" />
+				</h:form> 				  
+            </ui:define>
+            <ui:define name="data2">
+	            <h1>Trouver un book</h1>
+	            <h:form>
+				id ? :
+				<h:inputText value="#{bookController.book.id}" />
+				<br/>
+				<h:commandButton action="#{bookController.getBookById}"
+								value="Trouver le Book" />
+				</h:form>
+			</ui:define>
+			<ui:define name="data3">
+				<h1>Ajouter un book</h1>
+				<h:form>
+					<p>id du book</p>
+					<h:inputText value="#{bookController.book.id}" />
+					<br />
+					<p>titre du book</p>
+					<h:inputText value="#{bookController.book.title}" />
+					<br />
+					<p>price du book</p>
+					<h:inputText value="#{bookController.book.price}" />
+					<br />
+						
+					<h:commandButton action="#{bookController.insertBook}"
+						value="	Ajouter le Book" />
+				</h:form>
+			</ui:define>
+           
+        </ui:composition> 
+     </h:body> 
+
+</html>
